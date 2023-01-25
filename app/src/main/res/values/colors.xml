@@ -28,4 +28,5 @@
     <color name="dark_goldenrod">#FFB8860B</color>
     <color name="dark_salmon">#FFE9967A</color>
     <color name="dark_sea_green">#FF8FBC8F</color>
+    <color name="light_dark_green">#0F9D58</color> <!-- Not sure what is the right name of this color -->
 </resources>

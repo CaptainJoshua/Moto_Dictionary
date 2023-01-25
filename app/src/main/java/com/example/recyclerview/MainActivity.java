@@ -13,9 +13,8 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerAdapter adapter;
 
-    private ArrayList<String> countryNameList = new ArrayList<>();
-    private ArrayList<String> detailList = new ArrayList<>();
-    private ArrayList<Integer> imageList = new ArrayList<>();
+    private final ArrayList<String> wordsList = new ArrayList<>();
+    private final ArrayList<String> detailList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,42 +24,84 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
 
-        countryNameList.add("Japan");
-        countryNameList.add("Canada");
-        countryNameList.add("Singapore");
-        countryNameList.add("Spain");
-        countryNameList.add("South Korea");
-        countryNameList.add("Sweden");
-        countryNameList.add("New Zealand");
-        countryNameList.add("Hawaii");
-        countryNameList.add("France");
-        countryNameList.add("Italy");
+        wordsList.add("Cebuano to Tagalog"); // Title
+        wordsList.add("Buntag"); // 5 words
+        wordsList.add("Udto");
+        wordsList.add("Gabii");
+        wordsList.add("Kaadlawon");
+        wordsList.add("Pananglitan");
+        wordsList.add("Tagalog to Cebuano"); // Title
+        wordsList.add("Kaliwa"); // 5 words
+        wordsList.add("Kanan");
+        wordsList.add("Harap");
+        wordsList.add("Likod");
+        wordsList.add("Taas");
+        wordsList.add("Ilocano to Tagalog"); // Title
+        wordsList.add("Buok");
+        wordsList.add("Ngiwat");
+        wordsList.add("Tengnged");
+        wordsList.add("Takiag");
+        wordsList.add("Ima");
+        wordsList.add("Tagalog to Ilocano"); // Title
+        wordsList.add("Bewang");
+        wordsList.add("Binti");
+        wordsList.add("Tuhod");
+        wordsList.add("Tiyan");
+        wordsList.add("Balikat");
+        wordsList.add("Hiligaynon to Tagalog"); // Title
+        wordsList.add("Wala sila may may mahimo");
+        wordsList.add("Abyan sang tinapay");
+        wordsList.add("Bersyon");
+        wordsList.add("Indi ko ini maubra tanan");
+        wordsList.add("Giwasak ang tibuok nga dakbanwa sa kalayo");
+        wordsList.add("Tagalog to Hiligaynon"); // Title
+        wordsList.add("Pumunta");
+        wordsList.add("Ngayon");
+        wordsList.add("Bukas");
+        wordsList.add("Kahapon");
+        wordsList.add("Hayop");
 
-        detailList.add("Total Population: 123,951,692");
-        detailList.add("Total Population: 38,454,327");
-        detailList.add("Total Population: 5,943,546");
-        detailList.add("Total Population: 47,558,630");
-        detailList.add("Total Population: 52,268,636");
-        detailList.add("Total Population: 10,248,667");
-        detailList.add("Total Population: 4,915,166");
-        detailList.add("Total Population: 1,360,301");
-        detailList.add("Total Population: 65,615,692");
-        detailList.add("Total Population: 60,251,020");
 
-        imageList.add(R.drawable.japan1);
-        imageList.add(R.drawable.canada3);
-        imageList.add(R.drawable.singapore1);
-        imageList.add(R.drawable.spain1);
-        imageList.add(R.drawable.sokor1);
-        imageList.add(R.drawable.sweden1);
-        imageList.add(R.drawable.nz1);
-        imageList.add(R.drawable.hawaii1);
-        imageList.add(R.drawable.france1);
-        imageList.add(R.drawable.italy1);
+        detailList.add("Translation"); // Title (should be empty)
+        detailList.add("Tagalog: Umaga");
+        detailList.add("Tagalog: Tanghali");
+        detailList.add("Tagalog: Gabi");
+        detailList.add("Tagalog: Madaling araw");
+        detailList.add("Tagalog: Halimbawa");
+        detailList.add("Translation"); // Title (empty)
+        detailList.add("Cebuano: Sa wala");
+        detailList.add("Cebuano: Husto");
+        detailList.add("Cebuano: Atubangan");
+        detailList.add("Cebuano: Balik");
+        detailList.add("Cebuano: Gitas-on");
+        detailList.add("Translation"); // Title (empty)
+        detailList.add("Tagalog: Buhok");
+        detailList.add("Tagalog: Bibig");
+        detailList.add("Tagalog: Leeg");
+        detailList.add("Tagalog: Braso");
+        detailList.add("Tagalog: Kamay");
+        detailList.add("Translation"); // Title (empty)
+        detailList.add("Ilocano: Siket");
+        detailList.add("Ilocano: Saka");
+        detailList.add("Ilocano: Tumeng");
+        detailList.add("Ilocano: Buksit");
+        detailList.add("Ilocano: Abaga");
+        detailList.add("Translation"); // Title (empty)
+        detailList.add("Tagalog: Trabaho");
+        detailList.add("Tagalog: Sahod");
+        detailList.add("Tagalog: Lupa");
+        detailList.add("Tagalog: Dagat");
+        detailList.add("Tagalog: Bundok");
+        detailList.add("Translation"); // Title (empty)
+        detailList.add("Hiligaynon: Wala ngalan");
+        detailList.add("Hiligaynon: Indi ko kaya subong sini nga obra");
+        detailList.add("Hiligaynon: Petsa sing Paghimo");
+        detailList.add("Hiligaynon: Talawagon");
+        detailList.add("Hiligaynon: Ang lalaki nagkaon sang tinapay");
 
-        adapter = new RecyclerAdapter(countryNameList, detailList, imageList, MainActivity.this);
+
+        adapter = new RecyclerAdapter(wordsList, detailList, MainActivity.this);
         recyclerView.setAdapter(adapter);
-       
 
     }
 }
